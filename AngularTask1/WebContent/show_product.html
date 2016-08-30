@@ -1,0 +1,20 @@
+<br><br>
+Name: <input type="text" ng-model="name" ><br>
+Quantity: <input type="text" ng-model="quantity"><br><br>
+Price: <input type="text" ng-model="price"><br><br>
+<input type="button" value="Add Product" ng-click="add()">
+	
+<br><br>
+
+<table border=1 >
+	<tr ng-repeat="product in products">
+	<td>{{ product.id }}</td>
+	<td>{{ product.name }}</td>
+	<td>{{ product.quantity }}</td>
+	<td>{{ product.price }}</td>
+	<td>
+		<input type="button" onclick="location.href='#/editProducts'" value="Edit" ng-click="edit(product)">
+		<input type="button" value="Delete" ng-click="del(product)">
+	</td>
+	</tr>
+</table>
